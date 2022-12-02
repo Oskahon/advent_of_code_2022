@@ -7,15 +7,15 @@ fn main() {
 
     for line in data.lines() {
         let round = line.split(' ').collect::<Vec<_>>();
-        points += compare(round[0], round[1]);
-        points2 += add_points(round[0], round[1]);
+        points += part1(round[0], round[1]);
+        points2 += part2(round[0], round[1]);
     }
 
     println!("part1: {}", points);
     println!("part2: {}", points2);
 }
 
-fn compare(a: &str, b: &str) -> i64 {
+fn part1(a: &str, b: &str) -> i64 {
     let strat = HashMap::from([
         ("A", 0),
         ("B", 1),
@@ -40,7 +40,7 @@ fn compare(a: &str, b: &str) -> i64 {
     points
 }
 
-fn add_points(a: &str, b: &str) -> i64 {
+fn part2(a: &str, b: &str) -> i64 {
     let strat: HashMap<&str, i64> = HashMap::from([
         ("X", 0),
         ("Y", 3),
