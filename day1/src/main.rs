@@ -1,9 +1,9 @@
 fn main() {
-    let data = include_str!("../testi.txt");
+    let data = include_str!("../data.txt");
 
     let mut calories = Vec::new();
 
-    let elves = data.split("\r\n\r\n").collect::<Vec<_>>();
+    let elves = data.split("\n\n").collect::<Vec<_>>();
 
     for elf in elves {
         let sum: i32 = elf
