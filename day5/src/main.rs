@@ -1,5 +1,5 @@
 fn main() {
-    let input = include_str!("../testi.txt");
+    let input = include_str!("../data.txt");
 
     let lines = input.lines();
     let mut moves = false;
@@ -11,11 +11,14 @@ fn main() {
         }
         println!();
         let chars = line.chars().collect::<Vec<_>>();
-        let index = line.len() / 3;
-        for i in 0..index {
+        let index = line.len() / 4;
+        for i in 0..=index {
             let c = chars[i * 4 + 1];
+            if c == '1' {
+                break;
+            }
             if c != ' ' {
-                print!("{}", chars[i * 4 + 1])
+                print!("{i}:{c} ")
             }
         }
 
@@ -24,7 +27,7 @@ fn main() {
         if moves {
             println!("This is a move! \n{}", line);
         } else {
-            println!("{line}");
+            // println!("{line}");
         }
 
     }
