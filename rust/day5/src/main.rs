@@ -9,9 +9,12 @@ fn main() {
             moves = true;
             break;
         }
+
         println!();
+
         let chars = line.chars().collect::<Vec<_>>();
         let index = line.len() / 4;
+
         for i in 0..=index {
             let c = chars[i * 4 + 1];
             if c == '1' {

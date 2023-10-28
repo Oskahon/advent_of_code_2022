@@ -1,0 +1,4 @@
+- Laatikoiden listaaminen
+- Ohjeiden parsiminen
+- Laatikoiden liikuttaminen
+- Kaikki yhteen
