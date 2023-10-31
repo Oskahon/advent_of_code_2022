@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 fs.readFile('data.txt', 'utf8', (err, data)  => {
     let lines = data.split(/\r?\n/);
 
