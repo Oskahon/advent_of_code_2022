@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 fs.readFile('data.txt', 'utf8', (err, data)  => {
-    const lines = data.split(/\r?\n/);
+    const lines = data.split('\n');
     lines.pop();
 
     const pointPart1 = new Map([
